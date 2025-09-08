@@ -31,14 +31,14 @@ module.exports = {
         'super-tight': '-0.1em',
       },
       colors: {
-        'off-white': '#F5F5F5',
+        'off-white': '#ECECEC',
         'deep-sea': '#D06B3E',
         'primary-orange': '#D06B3E',
-        'primary-gray': '#F5F5F5',
+        'primary-gray': '#ECECEC',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+  background: '#ECECEC',
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",

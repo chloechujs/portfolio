@@ -38,10 +38,10 @@ export default function Hero() {
   const rotation = getCharacterRotation();
 
   return (
-    <div className="w-full h-[960px] pt-105">
+    <div className="w-full h-[960px] pt-95">
       {/* Header - 集成到Hero中 */}
       <header 
-        className="w-full top-0 left-0 bg-[#F5F5F5] z-10"
+        className="w-full top-0 left-0 bg-none z-10"
       >
         <nav className="flex items-center justify-between">
              <div className="w-full flex items-center justify-between">
@@ -54,7 +54,7 @@ export default function Hero() {
             
             <a 
               href="#about" 
-              className="text-primary-orange text-4xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
+              className="text-primary-orange text-6xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
             >
               ABOUT
             </a>
@@ -71,14 +71,14 @@ export default function Hero() {
 
             <a 
               href="#services" 
-              className="text-primary-orange text-4xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
+              className="text-primary-orange text-6xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
             >
               SERVICES
             </a>
             
             <a 
               href="#contact" 
-              className="text-primary-orange text-4xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
+              className="text-primary-orange text-6xl font-black font-mango cursor-pointer hover:opacity-80 transition-opacity no-underline"
             >
               CONTACT
             </a>
@@ -87,15 +87,18 @@ export default function Hero() {
       </header>
 
       {/* Background */}
-      <div className="w-full left-0 top-0 absolute bg-primary-gray" />
-      
-      {/* WEB - 在人物后面 (z-index 更低) */}
-      <div className="left-[170px] top-[255px] absolute text-primary-orange font-bold font-mango z-10 text-[335px] ">
-        WEB
-      </div>
+      <div className="w-full left-0 absolute bg-primary-gray" />
+
+      {/* 主要内容区域 - 添加padding避免文字被裁剪 */}
+      <div className="relative w-full h-full px-8 lg:px-16 xl:px-24">
+        
+        {/* WEB - 在人物后面 (z-index 更低) */}
+        <div className="left-[120px] top-[150px] absolute text-primary-orange font-bold font-mango z-10 text-[280px] xl:text-[320px] 2xl:text-[360px] 3xl:text-[400px]">
+          WEB
+        </div>
       
       {/* 3D 人物图像 - 在WEB前面 */}
-      <div className="absolute left-[400px] top-[150px] 3xl:left-[320px] 3xl:top-[120px] z-20">
+      <div className="absolute left-[400px] top-[100px] 3xl:left-[320px] 3xl:top-[80px] z-20">
         <div 
           className="relative transition-transform duration-700 ease-out character-3d floating"
           style={{
@@ -118,7 +121,7 @@ export default function Hero() {
             
           >
             <img 
-              className="w-[700px] h-[940px] 3xl:w-[500px] 3xl:h-[675px] object-cover filter drop-shadow-2xl"
+              className="w-[700px] h-[940px] xl:w-[800px] xl:h-[1080px] 2xl:w-[900px] 2xl:h-[1200px] 3xl:w-[1000px] 3xl:h-[1350px] object-cover filter drop-shadow-2xl"
               src="/chloechu.png" 
               alt="Portfolio Character" 
               style={{
@@ -137,18 +140,18 @@ export default function Hero() {
       </div>
       
       {/* UI/UX - 左侧 */}
-      <div className="left-[10px] top-[520px] absolute text-primary-orange font-bold font-mango z-30 text-[335px] ">
+      <div className="left-[20px] top-[480px] absolute text-primary-orange font-bold font-mango z-30 text-[280px] xl:text-[320px] 2xl:text-[360px] 3xl:text-[400px]">
         UI/UX
       </div>
       
     
       {/* DESIGNER - 右下 */}
-      <div className="right-[10px] top-[700px] absolute text-primary-orange font-bold font-mango z-30 text-[335px] ">
+      <div className="right-[20px] top-[680px] absolute text-primary-orange font-bold font-mango z-30 text-[280px] xl:text-[320px] 2xl:text-[360px] 3xl:text-[400px]">
         DESIGNER
       </div>
       
       {/* Side Content */}
-      <p className="w-[400px] top-[400px] right-[10px] absolute text-right text-primary-orange text-2xl font-extrabold font-neue z-30 uppercase">
+      <p className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] top-[400px] right-[10px] absolute text-right text-primary-orange text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-2xl font-extrabold font-neue z-30 uppercase leading-tight">
    I transform ideas and design to stand out, sell smart, and scale beautifully.
 </p>
       
@@ -158,6 +161,8 @@ export default function Hero() {
         </div>
         <div className="w-80 h-4 bg-amber-600 mt-2" />
       </div>
+      
+      </div> {/* 内容容器结束 */}
     
     </div>
   );
